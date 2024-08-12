@@ -60,3 +60,24 @@ function lengthOfLongestSubstring(s) {
     return maxSize;
 }
 ```
+
+## 4) Создание комплексного объекта
+
+При наличии объекта или массива obj вернуть компактный объект.
+Компактный объект — это то же самое, что и исходный объект, за исключением удаленных ключей, содержащих ложные значения. Эта операция применяется к объекту и любым вложенным объектам. Массивы считаются объектами, где индексы являются ключами. Значение считается ложным, когда Boolean(value) возвращает false.
+
+```javascript
+function compactObject(obj) {
+    if (obj === null) return null
+    if (Array.isArray(obj)) return obj.filter(Boolean).map(compactObject)
+    if (typeof obj !== 'object') return obj;
+
+    const compacted = {};
+    for (const key in obj) {
+        let value = compactObject(obj[key]);
+        if (value) compacted[key] = value;
+    }
+
+    return compacted;
+};
+```
