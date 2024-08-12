@@ -20,3 +20,20 @@ function getMaxValue(arr) {
 
   return maxEntry;
 }
+```
+
+## 2) Найти индексы элементов, сумма которых равна target
+
+```javascript
+function twoSum(nums, target) => {
+    const newMap = new Map();
+
+    for (let i = 0; i < nums.length; i++) {
+        const difference = target - nums[i];
+    
+        if (newMap.has(difference)) return [newMap.get(difference), i];
+
+        newMap.set(nums[i], i);
+    }
+};
+```
