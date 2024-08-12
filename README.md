@@ -55,7 +55,7 @@ function lengthOfLongestSubstring(s) {
             left++;
         }
         set.add(s[i]);
-        maxSize = Math.max(maxSize, i - left + 1)
+        maxSize = Math.max(maxSize, set.size)
     }
     return maxSize;
 }
