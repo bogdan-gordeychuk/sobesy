@@ -81,3 +81,16 @@ function compactObject(obj) {
     return compacted;
 };
 ```
+## 5) Нахождение повторяющихся чисел в массиве
+Задача на хэшмапу - 
+
+```javascript
+hasDuplicate(nums) {
+        const duplicates = new Map();
+        for (let i = 0; i < nums.length; i++) {
+            if (duplicates.has(nums[i])) return true
+            else duplicates.set(nums[i], i)
+        }
+        return false
+    }
+```
