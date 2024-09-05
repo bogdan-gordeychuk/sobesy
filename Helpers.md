@@ -1,4 +1,4 @@
-## 1)  глубокое копирование через рекурсию
+## 1)  глубокое копирование через рекурсию (копирует функции)
 
 ```javascript
 function deepCopy(val) {
@@ -26,6 +26,6 @@ function deepCopy(val) {
 
 
 ## Другие виды копирования - 
-# JSON.stringify(JSON.parse(obj)) - неглубокое копирование, игнорирует циклические ссылки, Map, Set, функции
-# structuredClone(obj) - глубокое копирование, игнорирует функции
-# Object.create(Object.getPrototypeOf(клонируемый_объект), Object.getOwnPropertyDescriptors(клонируемый_объект)) - глубокое копирование, поддерживает функции
+### JSON.stringify(JSON.parse(obj)) - неглубокое копирование, игнорирует циклические ссылки, Map, Set, функции
+### structuredClone(obj) - глубокое копирование, игнорирует функции
+### Object.create(Object.getPrototypeOf(клонируемый_объект), Object.getOwnPropertyDescriptors(клонируемый_объект)) - глубокое копирование, поддерживает функции
