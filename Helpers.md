@@ -23,3 +23,9 @@ function deepCopy(val) {
     return newVal;
 }
 ```
+
+
+## Другие виды копирования - 
+# JSON.stringify(JSON.parse(obj)) - неглубокое копирование, игнорирует циклические ссылки, Map, Set, функции
+# structuredClone(obj) - глубокое копирование, игнорирует функции
+# Object.create(Object.getPrototypeOf(клонируемый_объект), Object.getOwnPropertyDescriptors(клонируемый_объект)) - глубокое копирование, поддерживает функции
