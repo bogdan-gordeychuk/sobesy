@@ -118,3 +118,21 @@ isAnagram(s, t) {
         return true;
     }
 ```
+
+
+## 7) Мерж массивов
+
+```javascript
+var join = function(arr1, arr2) {
+    const combined = [...arr1, ...arr2];
+    const merged = {};
+    combined.forEach((obj) => {
+        const id = obj.id;
+        if (!merged[id]) {
+            merged[id] = {...obj};
+        } else {
+            merged[id] = {...merged[id], ...obj}
+        }
+    })
+    return Object.values(merged)
+```
